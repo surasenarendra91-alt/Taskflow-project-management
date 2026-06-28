@@ -1,7 +1,14 @@
 node_modules/
+<<<<<<< HEAD
 backend/node_modules/
 frontend/node_modules/
 
 .env
 backend/.env
 frontend/.env
+=======
+.env
+dist/
+build/
+coverage/
+>>>>>>> d51f1cde9a4f5e63e9d83edba9149291af913b4e
