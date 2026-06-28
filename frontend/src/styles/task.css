@@ -1,0 +1,63 @@
+.task-card {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+.task-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+
+.task-labels { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
+.task-label {
+  padding: 2px 8px; border-radius: 4px;
+  background: var(--primary-light); color: var(--primary-dark);
+  font-size: 11px; font-weight: 500;
+}
+
+.task-title { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.4; }
+.task-desc {
+  font-size: 12px; color: var(--text-muted);
+  margin-top: 4px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.task-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+.task-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.task-priority {
+  font-size: 10px; font-weight: 600;
+  padding: 2px 7px; border-radius: 999px;
+  text-transform: capitalize;
+}
+.task-due { font-size: 11px; color: var(--text-muted); }
+.task-due.overdue { color: var(--danger); font-weight: 600; }
+.task-checklist { font-size: 11px; color: var(--text-muted); }
+.task-assignees { display: flex; align-items: center; }
+
+/* Task Modal */
+.task-modal { max-width: 720px; }
+.task-modal-grid { display: grid; grid-template-columns: 1fr 260px; gap: 24px; }
+.task-modal-main { }
+.task-modal-sidebar { border-left: 1px solid var(--border); padding-left: 20px; }
+.task-modal-section { margin-bottom: 20px; }
+.task-modal-section h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; letter-spacing: 0.05em; }
+
+.editable-title {
+  font-size: 18px; font-weight: 700;
+  border: none; outline: none;
+  width: 100%; background: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s;
+}
+.editable-title:focus { border-bottom-color: var(--primary); }
+
+.checklist-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid var(--border);
+}
+.checklist-item input[type="checkbox"] { cursor: pointer; width: 16px; height: 16px; }
+.checklist-item span { font-size: 14px; flex: 1; }
+.checklist-item span.done { text-decoration: line-through; color: var(--text-muted); }
+.checklist-item button { background: none; border: none; cursor: pointer; color: var(--text-muted); font-size: 16px; }
